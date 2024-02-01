@@ -1,0 +1,208 @@
+/* технические */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1140px;
+}
+
+/* Шапка и меню сайта */
+
+.header {
+  background-color: #222222;
+  min-height: 75px;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-col-1 {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 111px;
+  margin-top: 18px;
+  align-items: center;
+}
+
+.header-col-2 {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 168px;
+  margin-top: 18px;
+  align-items: center;
+}
+
+/* Промо-блок главной страницы */
+
+.promo {
+  min-height: 764px;
+  background-color: #f1e4e6;
+}
+
+.promo_img {
+  background-image: url("../img/section-promo/promo_img.png");
+  margin-left: -225px;
+  height: 764px;
+  background-repeat: no-repeat;
+}
+
+.promo-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.promo_name {
+  margin-top: 290px;
+  margin-left: 64px;
+  margin-right: 101px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  color: #222222;
+  border-left: 12px solid #f16d7f;
+  padding-left: 16px;
+}
+
+.promo_name_bold {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.promo_name_pink {
+  color: #f16d7f;
+}
+
+/* Раздел категорий товаров */
+
+.categories {
+  background-color: #fff;
+}
+
+.categories_product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 65px;
+  gap: 30px;
+}
+
+.cat_text {
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #f16d7f;
+}
+
+.subtitle_cat_text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.cat-women {
+  background-color: grey;
+  background-image: url("../img/section-categories/cat-women.jpg");
+  width: 360px;
+  height: 260px;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-men {
+  background-color: grey;
+  background-image: url("../img/section-categories/cat-men.jpg");
+  width: 360px;
+  height: 260px;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-kids {
+  background-color: grey;
+  background-image: url("../img/section-categories/cat-kids.jpg");
+  width: 360px;
+  height: 260px;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-ACCESORIES {
+  background-color: grey;
+  background-image: url("../img/section-categories/cat-ACCESORIES.jpg");
+  width: 1140px;
+  height: 180px;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Раздел продукты магазина */
+
+.products {
+  min-height: 1586px;
+  background-color: #fff;
+}
+
+/* Раздел Особенности и Разное */
+
+.features {
+  min-height: 341px;
+  background-color: #222222;
+  color: #fff;
+}
+
+/* Раздел обратная связь */
+
+.feedback {
+  min-height: 448px;
+  background-color: #fff;
+  background-image: url("../img/section-feedback/subscribe-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Раздел подвал этого сайта */
+
+.footer {
+  min-height: 79px;
+  background-color: #222222;
+  color: #fff;
+}
