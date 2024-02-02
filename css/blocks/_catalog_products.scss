@@ -1,0 +1,124 @@
+/* Раздел Внутренний заголовок_Каталога товаров */
+
+.inner-title {
+    background-color: #f8f3f4;
+}
+
+.inner_wrap {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner_header {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: $main_color;
+}
+
+.breadcrumb {
+    list-style-type: none;
+    display: flex;
+    &-item {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #636363;
+        & :hover {
+            color: #f16d7f;
+        }
+        & a {
+            text-decoration: none;
+        }
+        &::after {
+            content: " / \00a0";
+            color: #636363;
+        }
+        &:last-child:after {
+            content: "";
+        }
+        &_active {
+            font-weight: bold;
+            color: #f16d7f;
+        }
+    }
+}
+
+/* Раздел Каталога товаров */
+
+.filter_box {
+    display: flex;
+    padding: 51px 0 16px;
+}
+
+.filter {
+    display: flex;
+    padding-left: 15px;
+    &_header {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        padding-right: 11px;
+    }
+}
+
+.sort {
+    padding-left: 304px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+    display: flex;
+    gap: 28px;
+}
+
+.list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.pagination_border {
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+
+.pagination {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.bracket {
+    display: flex;
+    text-align: center;
+}
+
+.page {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #c4c4c4;
+    text-decoration: none;
+    &_active {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ef5b70;
+        text-decoration: none;
+    }
+    &_separator {
+        margin: 0 -24px;
+        color: #c4c4c4;
+    }
+}

@@ -1,0 +1,71 @@
+.categories {
+    background-color: #fff;
+}
+
+.categories_product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 65px 0 96px;
+    gap: 30px;
+}
+
+.cat_text {
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #f16d7f;
+}
+
+.subtitle_cat_text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.cat-women {
+    background-color: grey;
+    background-image: url("../img/section-categories/cat-women.jpg");
+    width: 360px;
+    height: 260px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-men {
+    background-color: grey;
+    background-image: url("../img/section-categories/cat-men.jpg");
+    width: 360px;
+    height: 260px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-kids {
+    background-color: grey;
+    background-image: url("../img/section-categories/cat-kids.jpg");
+    width: 360px;
+    height: 260px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-ACCESORIES {
+    background-color: grey;
+    background-image: url("../img/section-categories/cat-ACCESORIES.jpg");
+    width: 1140px;
+    height: 180px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
