@@ -1,0 +1,129 @@
+/* Раздел Слайдер товаров */
+
+.slider {
+    background-color: #f7f7f7;
+}
+
+.slider_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img_slider {
+    padding: 11px 0 42px;
+}
+
+.slider_button {
+    padding: 13px 17px;
+    background-color: rgba(42, 42, 42, 0.15);
+    &:hover {
+        fill: $main_color;
+    }
+}
+
+/* Раздел Стоимости и описания товара */
+
+.wrap_card_price {
+    position: relative;
+    border: 1px solid #eaeaea;
+    margin: -65px 0 81px;
+    padding: 65px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.card_price_name {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $main_color;
+    padding-bottom: 12px;
+}
+
+.streak_red {
+    width: 63px;
+    border-bottom: 3px solid #ef5b70;
+}
+
+.marketing {
+    padding: 12px 0 48px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4d4d4d;
+}
+
+.p_marketing {
+    max-width: 554px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5e5e5e;
+}
+
+.p_price {
+    padding: 32px 0 65px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #ef5b70;
+}
+
+.streak_grey {
+    width: 641px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.sort_price {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 23px;
+    padding: 65px 0 49px;
+}
+
+.button_cart {
+    width: 211px;
+    height: 47px;
+    border: 1px solid #ff6a6a;
+    & :hover {
+        background-color: $main_color;
+        color: white;
+        fill: white;
+    }
+}
+
+.price_cart {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #f26376;
+}
+
+.price_cart_ico {
+    fill: #ef5b70;
+    margin: 14px 23px 9px;
+}
+
+.add_to_cart {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/* Сдвиг вниз раздела feedback */
+
+.product {
+    margin-top: 80px;
+}

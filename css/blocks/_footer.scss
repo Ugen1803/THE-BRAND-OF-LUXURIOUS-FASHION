@@ -1,0 +1,37 @@
+.footer {
+    min-height: 79px;
+    background-color: #222222;
+    color: #fff;
+}
+
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p_footer {
+    padding: 30px 0;
+}
+
+.icons {
+    display: flex;
+    list-style-type: none;
+    padding: 24px 0 23px;
+    gap: 7px;
+}
+
+.social_link {
+    font-size: 20px;
+    background-color: white;
+    color: #000000;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    &:hover {
+        background-color: $main_color;
+        color: white;
+    }
+}

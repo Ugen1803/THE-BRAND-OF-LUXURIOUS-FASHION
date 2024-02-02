@@ -1,0 +1,48 @@
+.features {
+    background-color: #222224;
+}
+
+.categories_features {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 103px 0 104px;
+    gap: 30px;
+}
+
+.categories_features_img {
+    height: 40px;
+    margin-bottom: 19px;
+    text-align: center;
+}
+
+.delivery {
+    width: 360px;
+    text-decoration: none;
+}
+
+.sales {
+    width: 360px;
+    text-decoration: none;
+}
+
+.assurance {
+    width: 360px;
+    text-decoration: none;
+}
+
+.h3_features {
+    margin-bottom: 16px;
+    font-weight: normal;
+    font-size: 19.96px;
+    line-height: 24px;
+    color: #fbfbfb;
+}
+
+.p_features {
+    font-weight: 300;
+    font-size: 13.972px;
+    line-height: 17px;
+    text-align: center;
+    color: #fbfbfb;
+}

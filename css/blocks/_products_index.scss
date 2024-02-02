@@ -1,0 +1,151 @@
+.products {
+    background-color: #fff;
+}
+
+.fetured_items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 48px 0;
+}
+
+.h2_fetured_items {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    color: #222222;
+    text-align: center;
+}
+
+.p_fetured_items {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9f9f9f;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.card {
+    width: 360px;
+    background-color: #f8f8f8;
+    list-style-type: none;
+}
+
+.feture_item1 {
+    background-color: #ccc8c5;
+    background-image: url("../img/section-products/items-1.jpg");
+    width: 360px;
+    height: 420px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.feture_item2 {
+    background-color: thistle;
+    /* background-image: url("../img/section-products/items-2.jpg"); */
+    width: 360px;
+    height: 420px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.feture_item3 {
+    background-color: #ccc8c5;
+    background-image: url("../img/section-products/items-3.jpg");
+    width: 360px;
+    height: 420px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.feture_item4 {
+    background-color: thistle;
+    background-image: url("../img/section-products/items-4.jpg");
+    width: 360px;
+    height: 420px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.feture_item5 {
+    background-color: thistle;
+    background-image: url("../img/section-products/items-5.jpg");
+    width: 360px;
+    height: 420px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.feture_item6 {
+    background-color: thistle;
+    background-image: url("../img/section-products/items-6.jpg");
+    width: 360px;
+    height: 420px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.name_feture_item {
+    padding-left: 18px;
+    padding-top: 24px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.description_feture_item {
+    padding-left: 18px;
+    padding-right: 29px;
+    padding-top: 13px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5d5d5d;
+}
+
+.price_fetured_item {
+    padding-left: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #f16d7f;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 95px;
+}
+
+.all_product {
+    border: 1px solid #ff6a6a;
+    padding: 14px 38px;
+    background-color: #e5e5e5;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #f26376;
+    text-decoration: none;
+    &:hover {
+        background-color: $main_color;
+        color: #ffffff;
+    }
+}
