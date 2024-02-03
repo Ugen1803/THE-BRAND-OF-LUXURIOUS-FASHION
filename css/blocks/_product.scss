@@ -10,10 +10,6 @@
     align-items: center;
 }
 
-.img_slider {
-    padding: 11px 0 42px;
-}
-
 .slider_button {
     padding: 13px 17px;
     background-color: rgba(42, 42, 42, 0.15);
@@ -25,18 +21,44 @@
     }
 }
 
+.img_slider {
+    height: 724px;
+    padding: 11px 0 42px;
+    @media (max-width: $tablet_breakpoint) {
+        height: 565px;
+        padding: 29px 0;
+    }
+    @media (max-width: $phone_breakpoint) {
+        height: 454px;
+        padding: 85px 0;
+    }
+}
+
 /* Раздел Стоимости и описания товара */
+
+.card_price {
+    @media (max-width: $tablet_breakpoint) {
+        outline: 1px solid #eaeaea;
+    }
+}
 
 .wrap_card_price {
     position: relative;
-    border: 1px solid #eaeaea;
-    margin: -65px 0 81px;
+    outline: 1px solid #eaeaea;
+    margin: -65px 0 128px;
     padding: 65px 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
+    @media (max-width: $tablet_breakpoint) {
+        margin: 0 0 129px 0;
+        outline: none;
+    }
+    @media (max-width: $phone_breakpoint) {
+        margin: 0 0 64px 0;
+    }
 }
 
 .card_price_name {
@@ -61,11 +83,14 @@
 }
 
 .p_marketing {
-    max-width: 554px;
+    width: 554px;
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
     color: #5e5e5e;
+    @media (max-width: $phone_breakpoint) {
+        width: 326px;
+    }
 }
 
 .p_price {
@@ -74,11 +99,17 @@
     font-size: 24px;
     line-height: 29px;
     color: #ef5b70;
+    @media (max-width: $phone_breakpoint) {
+        padding: 32px 0;
+    }
 }
 
 .streak_grey {
     width: 641px;
     border-bottom: 1px solid #eaeaea;
+    @media (max-width: $phone_breakpoint) {
+        width: 175px;
+    }
 }
 
 .sort_price {
@@ -91,6 +122,9 @@
     display: flex;
     gap: 23px;
     padding: 65px 0 49px;
+    @media (max-width: $phone_breakpoint) {
+        padding: 49px 0 65px;
+    }
 }
 
 .price_cart {
@@ -114,8 +148,51 @@
     }
 }
 
+/* Смена карточек товара местами при планшетной версии */
+
+.change {
+    @media (max-width: $tablet_breakpoint) {
+        display: flex;
+        flex-flow: wrap;
+        .second {
+            order: 1;
+        }
+        .first {
+            order: 2;
+        }
+    }
+    @media (max-width: $phone_breakpoint) {
+        display: flex;
+        flex-flow: wrap;
+        .first {
+            order: 1;
+        }
+        .third {
+            order: 2;
+        }
+    }
+}
+
+.close_product_tablet {
+    @media (max-width: $tablet_breakpoint) {
+        display: none;
+    }
+    @media (max-width: $phone_breakpoint) {
+        display: initial;
+    }
+}
+
+.close_product_phone {
+    @media (max-width: $phone_breakpoint) {
+        display: none;
+    }
+}
+
 /* Сдвиг вниз раздела feedback */
 
 .product {
-    margin-top: 80px;
+    margin-top: 128px;
+    @media (max-width: $phone_breakpoint) {
+        margin-top: 64px;
+    }
 }

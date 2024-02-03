@@ -1,3 +1,5 @@
+/* Раздел сайта обратная связь */
+
 .feedback {
     background-color: #fff;
     background-image: url("../img/section-feedback/subscribe-bg.jpg");
@@ -9,7 +11,17 @@
     display: flex;
     align-items: flex-end;
     gap: 327px;
-    padding: 97px 0 156px;
+    padding: 97px 0px 156px;
+    @media (max-width: $tablet_breakpoint) {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        padding: 64px 0 140px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        gap: 59px;
+        padding: 64px 10px 110px;
+    }
 }
 
 .foto_communication {
@@ -18,7 +30,7 @@
 }
 
 .p_communication {
-    margin-top: 30px;
+    padding-top: 30px;
     font-style: italic;
     font-weight: normal;
     font-size: 20px;
@@ -28,23 +40,33 @@
 
 .subscribe {
     text-align: center;
+    
 }
 
 .h3_subscribe {
     font-weight: bold;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 39px;
     color: #222224;
+    @media (max-width: $phone_breakpoint) {
+        line-height: 37px;
+    }
 }
 
 .promotion {
     font-weight: normal;
     font-size: 18px;
+    line-height: 30px;
+    @media (max-width: $phone_breakpoint) {
+        font-size: 14px;
+        line-height: 21px;
+    }
 }
 
 .subscribe_email {
     padding-top: 32px;
     display: flex;
+    margin: 0 10px;
 }
 
 .wrap_email {

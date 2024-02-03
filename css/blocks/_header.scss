@@ -11,6 +11,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 18px 0;
+    @media (max-width: $tablet_breakpoint) {
+        padding: 18px 16px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        padding: 18px 8px;
+    }
 }
 
 /* Левая часть меню сайта */
@@ -44,6 +50,8 @@
 
 /* Правая часть меню сайта */
 
+// Сендвич меню сайта
+
 .header-col-2 {
     display: flex;
     justify-content: space-between;
@@ -51,6 +59,9 @@
     // list-style-type: none;
     width: 168px;
     align-items: center;
+    @media (max-width: $phone_breakpoint) {
+        justify-content: right;
+    }
 }
 
 .sandwich_drop {
@@ -120,7 +131,22 @@
     text-decoration: none;
     padding-left: 54px;
 }
-//--------------------------------------------
+
+// Регистрация
+
+.registracion_wrap {
+    @media (max-width: $phone_breakpoint) {
+        display: none;
+    }
+}
+
+// Корзина
+
+.cart_wrap {
+    @media (max-width: $phone_breakpoint) {
+        display: none;
+    }
+}
 
 .cart {
     position: relative;

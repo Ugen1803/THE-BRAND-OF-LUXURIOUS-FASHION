@@ -1,13 +1,17 @@
+/* Раздел Каталога товаров_Главная */
+
 .products {
     background-color: #fff;
 }
 
-.fetured_items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 48px 0;
+.products_header_wrap {
+    padding: 0 0 48px 0;
+    @media (max-width: $tablet_breakpoint) {
+        padding: 0 0 74px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        padding: 0 0 65px;
+    }
 }
 
 .h2_fetured_items {
@@ -25,6 +29,19 @@
     color: #9f9f9f;
     text-align: center;
     margin-top: 6px;
+    @media (max-width: $tablet_breakpoint) {
+        margin-top: 3px;
+    }
+}
+
+.fetured_items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    @media (max-width: $tablet_breakpoint) {
+        gap: 16px;
+    }
 }
 
 .card {
@@ -171,7 +188,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 95px;
+    padding: 48px 0 95px;
+    @media (max-width: $tablet_breakpoint) {
+        padding: 33px 0 65px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        padding: 41px 0 96px;
+    }
 }
 
 .all_product {

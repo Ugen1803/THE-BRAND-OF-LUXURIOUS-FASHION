@@ -107,7 +107,7 @@
                     </li>
 
                     <!--Регистрация -->
-                    <li>
+                    <li class="registracion_wrap">
                         <a href="registracion.html">
                             <svg class="header_icon_svg" width="29" height="29" viewBox="0 0 29 29"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +118,7 @@
                     </li>
 
                     <!-- Корзина -->
-                    <li>
+                    <li class="cart_wrap">
                         <a class="cart" href="cart.html">
                             <svg class="header_icon_svg" width="32" height="29" viewBox="0 0 32 29"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -133,11 +133,11 @@
         </div>
     </header>
 
-
     <main class="main">
 
         <section class="inner-title">
             <div class="container">
+
                 <div class="inner_wrap">
                     <h1 class="inner_header">NEW ARRIVALS</h1>
                     <nav aria-label="breadcrumb">
@@ -152,6 +152,7 @@
                         </ol>
                     </nav>
                 </div>
+
             </div>
         </section>
 
@@ -161,10 +162,10 @@
 
                 <section class="filter_box">
 
-                    <details class="filter" open>
+                    <details class="filter">
                         <summary class="filter_title">
-                            <h3>FILTER</h3>
-                            <svg width="15" height="10" viewBox="0 0 15 10" xmlns="http://www.w3.org/2000/svg">
+                            <h3 class="filter_title_h3">FILTER</h3>
+                            <svg class="filter_ico" viewBox="0 0 15 10" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
                             </svg>
@@ -238,7 +239,7 @@
                             </div>
                         </details>
 
-                        <details class="list" open>
+                        <details class="list">
                             <summary class="list_title">SIZE
                                 <svg width="11" height="6" viewBox="0 0 11 6" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -281,6 +282,7 @@
                 </section>
 
                 <ul class="fetured_items">
+
                     <li class="card">
                         <div class="products_overlay">
                             <button class="btn_add">
@@ -298,6 +300,7 @@
                         </p>
                         <p class="price_fetured_item">$52.00</p>
                     </li>
+
                     <li class="card">
                         <div class="products_overlay">
                             <button class="btn_add">
@@ -315,7 +318,8 @@
                         </p>
                         <p class="price_fetured_item">$52.00</p>
                     </li>
-                    <li class="card">
+
+                    <li class="card close_fetured_item">
                         <div class="products_overlay">
                             <button class="btn_add">
                                 <img class="btn_add_img" src="img/header/cart-ico.svg" alt="btn_add">
@@ -332,6 +336,7 @@
                         </p>
                         <p class="price_fetured_item">$52.00</p>
                     </li>
+
                     <li class="card">
                         <div class="products_overlay">
                             <button class="btn_add">
@@ -349,6 +354,7 @@
                         </p>
                         <p class="price_fetured_item">$52.00</p>
                     </li>
+
                     <li class="card">
                         <div class="products_overlay">
                             <button class="btn_add">
@@ -366,6 +372,7 @@
                         </p>
                         <p class="price_fetured_item">$52.00</p>
                     </li>
+
                     <li class="card">
                         <div class="products_overlay">
                             <button class="btn_add">
@@ -383,6 +390,7 @@
                         </p>
                         <p class="price_fetured_item">$52.00</p>
                     </li>
+
                     <li class="card">
                         <div class="products_overlay">
                             <button class="btn_add">
@@ -400,6 +408,7 @@
                         </p>
                         <p class="price_fetured_item">$52.00</p>
                     </li>
+
                     <li class="card">
                         <div class="products_overlay">
                             <button class="btn_add">
@@ -417,6 +426,7 @@
                         </p>
                         <p class="price_fetured_item">$52.00</p>
                     </li>
+
                     <li class="card">
                         <div class="products_overlay">
                             <button class="btn_add">
@@ -437,7 +447,7 @@
 
                 </ul>
 
-                <div class="button-wrapper">
+                <div class="pagination_wrap">
                     <nav class="pagination_border">
                         <div class="pagination">
                             <button class="bracket">
@@ -513,6 +523,7 @@
     <section class="feedback">
         <h2 class="hidden">Обратная связь</h2>
         <div class="container">
+
             <div class="communication">
 
                 <section class="foto_communication">
@@ -524,10 +535,10 @@
                 </section>
 
                 <section class="subscribe">
+
                     <h3 class="h3_subscribe">SUBSCRIBE <br>
                         <span class="promotion">FOR OUR NEWLETTER AND PROMOTION</span>
                     </h3>
-
                     <form action="#" class="subscribe_email">
                         <div class="wrap_email">
                             <input type="email" class="email" placeholder="Enter Your Email" required>
@@ -536,6 +547,7 @@
                             <button type="submit" class="subscribe_button">Subscribe</button>
                         </div>
                     </form>
+
                 </section>
 
             </div>
