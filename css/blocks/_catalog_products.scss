@@ -9,6 +9,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $phone_breakpoint) {
+        flex-direction: column;
+        gap: 32px;
+        padding: 24px 0 46px;
+    }
 }
 
 .inner_header {
@@ -50,13 +55,24 @@
 .filter_box {
     display: flex;
     align-items: center;
-    padding: 39px 0 16px;
+    padding: 51px 0 64px;
     gap: 30px;
+    @media (max-width: $tablet_breakpoint) {
+        padding: 24px 0 40px;
+        justify-content: space-between;
+    }
+    @media (max-width: $phone_breakpoint) {
+        padding: 24px 0 32px;
+        gap: 0px;
+    }
 }
 
 .filter {
     width: 360px;
     position: relative;
+    @media (max-width: $phone_breakpoint) {
+        width: auto;
+    }
 }
 
 .filter_title {
@@ -64,7 +80,6 @@
     align-items: center;
     gap: 11px;
     padding-left: 16px;
-    padding-top: 13px;
     border: none;
     background: #ffffff;
     fill: #000000;
@@ -77,6 +92,28 @@
     &:hover {
         fill: #ef5b70;
         color: #ef5b70;
+    }
+    @media (max-width: $tablet_breakpoint) {
+        padding-left: 0px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        gap: 0px;
+        padding-left: 0px;
+    }
+}
+
+.filter_title_h3 {
+    @media (max-width: $phone_breakpoint) {
+        display: none;
+    }
+}
+
+.filter_ico {
+    height: 10px;
+    width: 15px;
+    @media (max-width: $phone_breakpoint) {
+        height: 25px;
+        width: 37px;
     }
 }
 
@@ -151,19 +188,27 @@
 .sort {
     display: flex;
     gap: 28px;
-    font-size: 14px;
-    line-height: 17px;
     color: #6f6e6e;
+    @media (max-width: $phone_breakpoint) {
+        justify-content: flex-start;
+        gap: 24px;
+    }
 }
 
 .list {
     position: relative;
     display: flex;
-    gap: 10px;
     align-items: center;
     text-decoration: none;
     border: none;
     background: #ffffff;
+}
+
+.list_title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
     font-size: 14px;
     line-height: 17px;
     color: #6f6e6e;
@@ -173,19 +218,15 @@
         fill: #ef5b70;
         color: #ef5b70;
     }
-}
-
-.list_title {
-    display: flex;
-    gap: 10px;
-    padding-top: 13px;
-    padding-bottom: 5px;
-    align-items: center;
-    cursor: pointer;
+    @media (max-width: $phone_breakpoint) {
+        font-size: 12px;
+        line-height: 14px;
+        gap: 9px;
+    }
 }
 
 .list[open] .list_title {
-    fill: #ef5b70;
+    fill: #070505;
     color: #ef5b70;
 }
 
@@ -213,8 +254,23 @@
 .list_checkbox {
     height: 12px;
     width: 12px;
-    outline: 1px solid #ebebeb;
-    border-radius: 0px;
+    opacity: 0.4;
+}
+
+.close_fetured_item {
+    @media (max-width: $tablet_breakpoint) {
+        display: none;
+    }
+}
+
+.pagination_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0 96px;
+    @media (max-width: $tablet_breakpoint) {
+        padding: 40px 0 63px;
+    }
 }
 
 .pagination_border {

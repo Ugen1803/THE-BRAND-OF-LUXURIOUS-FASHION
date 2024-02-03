@@ -1,5 +1,15 @@
 /* Страница Регистрации на сайте */
 
+.inner_wrap_registracion {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $phone_breakpoint) {
+        justify-content: center;
+    }
+}
+
 .registracion {
     background-color: #ffffff;
 }
@@ -7,7 +17,16 @@
 .registration_wrap {
     display: flex;
     justify-content: space-between;
+    gap: 128px;
     padding: 64px 0 96px;
+    @media (max-width: $tablet_breakpoint) {
+        gap: 22px;
+        padding: 40px 0 96px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
 .registration_points {
@@ -92,11 +111,15 @@
         border: 1px solid #4a4a4a;
         transform: scale(1.1);
     }
+    @media (max-width: $phone_breakpoint) {
+    }
 }
 
 .marketing_registration {
     width: 652px;
-    padding-right: 27px;
+    @media (max-width: $tablet_breakpoint) {
+        width: 354px;
+    }
 }
 
 .marketing_registration_header {
@@ -111,6 +134,15 @@
         color: #000000;
         padding: 22px 0;
     }
+    @media (max-width: $tablet_breakpoint) {
+        font-size: 16px;
+        line-height: 19px;
+        &_p {
+            font-size: 16px;
+            line-height: 19px;
+            padding: 32px 0 22px;
+        }
+    }
 }
 
 .loyalty_items {
@@ -120,10 +152,18 @@
     gap: 16px;
 }
 
+.loyalty_item {
+    display: flex;
+    gap: 23px;
+}
+
 .loyalty_item_content {
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    padding-left: 23px;
+    @media (max-width: $tablet_breakpoint) {
+        font-size: 16px;
+        line-height: 26px;
+    }
 }

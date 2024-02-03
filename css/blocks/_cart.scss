@@ -1,16 +1,40 @@
 /* Страница Оформления Покупок */
 
-.purchases_wrap {
-    padding: 96px 0 48px;
+.inner_wrap_cart {
+    padding: 60px 0;
     display: flex;
-    gap: 128px;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $phone_breakpoint) {
+        padding: 50px 0px 69px 92px;
+    }
+}
+
+.purchases_wrap {
+    padding: 96px 0 128px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $tablet_breakpoint) {
+        flex-direction: column;
+        padding: 59px 0 128px;
+        gap: 64px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        padding: 39px 0 96px;
+        gap: 48px;
+    }
 }
 
 .purchases_cards {
-    min-width: 652px;
     display: flex;
     flex-direction: column;
     gap: 72px;
+    @media (max-width: $tablet_breakpoint) {
+        gap: 62px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        gap: 30px;
+    }
 }
 
 .purchases_items {
@@ -25,15 +49,30 @@
     display: flex;
     background: #ffffff;
     filter: drop-shadow(17px 19px 24px rgba(119, 43, 43, 0.13));
+    @media (max-width: $tablet_breakpoint) {
+        width: 734px;
+        height: 306px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        width: 358px;
+        height: 188px;
+    }
 }
 
 .purchases_item_img {
     width: 262px;
     height: 306px;
+    @media (max-width: $phone_breakpoint) {
+        width: 144px;
+        height: 188px;
+    }
 }
 
 .description_item {
     padding: 22px 57px 62px 31px;
+    @media (max-width: $phone_breakpoint) {
+        padding: 13px 50px 38px 17px;
+    }
 }
 
 .description_item_name {
@@ -42,6 +81,11 @@
     line-height: 29px;
     color: #222222;
     padding-bottom: 42px;
+    @media (max-width: $phone_breakpoint) {
+        padding-bottom: 26px;
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
 
 .description_item_content {
@@ -59,21 +103,53 @@
         border: 1px solid #eaeaea;
         padding: 1px 16px;
         margin-left: 24px;
+        @media (max-width: $phone_breakpoint) {
+            font-size: 10px;
+            line-height: 12px;
+            padding: 1px 9px;
+            margin-left: 15px;
+        }
+    }
+    @media (max-width: $phone_breakpoint) {
+        font-size: 14px;
+        line-height: 17px;
     }
 }
 
-.close_icon {
+.close_icon_wrap {
     fill: #575757;
     border-radius: 0px;
     padding: 28px 22px 0 57px;
     & :hover {
         fill: #ef5b70;
     }
+    @media (max-width: $tablet_breakpoint) {
+        padding: 28px 22px 0 137px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        padding: 17px 12px 0 0px;
+    }
+}
+
+.close_icon {
+    width: 18px;
+    height: 18px;
+    @media (max-width: $phone_breakpoint) {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 .purchases_button {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $tablet_breakpoint) {
+        justify-content: center;
+        gap: 48px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        gap: 9px;
+    }
 }
 
 .press_button {
@@ -104,14 +180,32 @@
             transform: translateY(-10px);
         }
     }
+    @media (max-width: $phone_breakpoint) {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 9px 18px;
+    }
 }
 
 .checkout {
     width: 360px;
+    @media (max-width: $tablet_breakpoint) {
+        display: flex;
+        gap: 15px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
 .shipping_adress_wrap {
+    display: flex;
+    flex-direction: column;
     padding: 17px 0 57px;
+    @media (max-width: $tablet_breakpoint) {
+        padding: 0;
+    }
 }
 
 .shipping_adress_name {
@@ -124,9 +218,8 @@
 
 .shipping_adress {
     width: 360px;
-    height: 45px;
     margin-bottom: 20px;
-    padding-left: 17px;
+    padding: 12px 0 12px 17px;
     font-size: 13px;
     line-height: 16px;
     color: #222222;
@@ -136,9 +229,8 @@
     }
     &_grey {
         width: 360px;
-        height: 45px;
         margin-bottom: 20px;
-        padding-left: 17px;
+        padding: 12px 0 12px 17px;
         font-size: 13px;
         line-height: 16px;
         color: #222222;
@@ -170,7 +262,18 @@
 
 .checkout_wrap {
     min-width: 360px;
+    height: 214px;
     background: #f5f3f3;
+    @media (max-width: $tablet_breakpoint) {
+        margin-top: 38px;
+    }
+    @media (max-width: $phone_breakpoint) {
+        margin-top: 48px;
+    }
+}
+
+.total_price_name {
+    padding: 39px 34px 21px 0px;
 }
 
 .sub_total {
@@ -178,9 +281,9 @@
     font-size: 11px;
     line-height: 13px;
     color: #4a4a4a;
-    padding: 39px 34px 12px 218px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 25px;
 }
 
 .grand_total {
@@ -195,24 +298,20 @@
         color: #f16d7f;
     }
     display: flex;
-    justify-content: space-between;
-    padding: 0 37px 21px 153px;
+    justify-content: flex-end;
+    gap: 25px;
+    padding: 12px 3px 0 0;
 }
 
 .streak_button_wrap {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.streak_grey_checkout {
-    width: 288px;
-    border-bottom: 1px solid #e2e2e2;
-    padding: 0 42px;
+    justify-content: center;
+    padding: 0 0 43px 0;
 }
 
 .button_checkout_wrap {
-    padding: 17px 0 42px;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 17px;
 }
 
 .button_checkout {

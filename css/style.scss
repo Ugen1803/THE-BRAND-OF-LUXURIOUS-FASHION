@@ -1,6 +1,8 @@
 // переменные (свойсво, применяемое к элементам)
 $main_color: #f16d7f;
 $box_shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+$tablet_breakpoint: 1180px;
+$phone_breakpoint: 768px;
 
 // примеси (группа свойств, которые применяются к элементам)
 @mixin list() {
@@ -35,9 +37,20 @@ body {
 }
 
 .container {
+    /* desktop */
     // outline: 1px solid red;
     margin: 0 auto;
-    width: 1140px;
+    width: 1140px; // ширина для десктопа по макету
+    /* tablet */
+    // +40px для перестроения адаптива = 1180px
+    @media (max-width: $tablet_breakpoint) {
+        width: 736px; // ширина для планшета по макету
+    }
+    /* phone */
+    // +32px для перестроения адаптива = 768px
+    @media (max-width: $phone_breakpoint) {
+        width: 360px; // ширина для планшета по макету
+    }
 }
 
 .hidden {
