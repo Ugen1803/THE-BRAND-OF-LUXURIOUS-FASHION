@@ -1,13 +1,19 @@
+/* Шапка и меню сайта */
+
 .header {
     background-color: #222222;
-    min-height: 75px;
+    height: 75px;
+    position: relative;
 }
 
 .header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 18px 0;
 }
+
+/* Левая часть меню сайта */
 
 .header-col-1 {
     display: flex;
@@ -15,7 +21,6 @@
     @include list();
     // list-style-type: none;
     width: 111px;
-    margin-top: 18px;
     align-items: center;
 }
 
@@ -27,16 +32,6 @@
     }
 }
 
-.header-col-2 {
-    display: flex;
-    justify-content: space-between;
-    @include list();
-    // list-style-type: none;
-    width: 168px;
-    margin-top: 18px;
-    align-items: center;
-}
-
 .header_icon_svg {
     fill: #e8e8e8; // fill - изменение цвета в коде svg-картинки
     transition-property: fill, transform;
@@ -46,6 +41,86 @@
         transform: scale(1.1);
     }
 }
+
+/* Правая часть меню сайта */
+
+.header-col-2 {
+    display: flex;
+    justify-content: space-between;
+    @include list();
+    // list-style-type: none;
+    width: 168px;
+    align-items: center;
+}
+
+.sandwich_drop {
+    display: block;
+}
+
+.sandwich_list_wrap {
+    position: absolute;
+    z-index: 10;
+    width: 232px;
+    height: 764px;
+    top: 75px;
+    right: 0px;
+    background: #ffffff;
+    box-shadow: $box_shadow;
+    padding: 16px 17px 16px 0;
+    &_close {
+        display: none;
+    }
+}
+
+.sandwich_close {
+    text-align: end;
+}
+
+.button_close {
+    background: #ffffff;
+    border: none;
+}
+
+.sandwich_list {
+    @include list();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sandwich_list_header {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding: 9px 0 4px 34px;
+}
+
+.sandwich_list_button {
+    font-size: 14px;
+    line-height: 17px;
+    color: #f16d7f;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 20px 0 12px 33px;
+}
+
+.sandwich_list_link_wrap {
+    @include list();
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.sandwich_list_link {
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+    text-decoration: none;
+    padding-left: 54px;
+}
+//--------------------------------------------
 
 .cart {
     position: relative;
