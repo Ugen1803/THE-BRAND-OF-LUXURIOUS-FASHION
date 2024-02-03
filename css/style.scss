@@ -1,5 +1,6 @@
 // переменные (свойсво, применяемое к элементам)
 $main_color: #f16d7f;
+$box_shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 
 // примеси (группа свойств, которые применяются к элементам)
 @mixin list() {
@@ -34,6 +35,7 @@ body {
 }
 
 .container {
+    // outline: 1px solid red;
     margin: 0 auto;
     width: 1140px;
 }
@@ -86,3 +88,7 @@ body {
 /* Страница Оформления Покупок */
 
 @import "blocks/cart";
+
+/* Страница Регистрации на сайте */
+
+@import "blocks/registracion";

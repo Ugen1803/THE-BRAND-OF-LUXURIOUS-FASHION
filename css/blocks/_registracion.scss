@@ -1,0 +1,129 @@
+/* Страница Регистрации на сайте */
+
+.registracion {
+    background-color: #ffffff;
+}
+
+.registration_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0 96px;
+}
+
+.registration_points {
+    width: 360px;
+}
+
+.registration_input_point_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.registracion_heading {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+}
+
+.input_point {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    &::placeholder {
+        color: #b1b1b1;
+    }
+    border: 1px solid #a4a4a4;
+    padding: 13px 0 16px 17px;
+}
+
+.registracion_p {
+    padding: 15px 0 39px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #b1b1b1;
+}
+
+.radio_points {
+    padding: 31px 0 33px;
+    display: flex;
+    align-items: center;
+}
+
+.radio_point {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #a4a4a4;
+    box-sizing: border-box;
+}
+
+.radio_point_name {
+    padding: 0 20px 0 10px;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+    text-align: center;
+}
+
+.registracion_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px 29px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    fill: #ffffff;
+    background: $main_color;
+    padding: 15px 41px;
+    border: 1px solid $main_color;
+    transition-property: background-color, transform;
+    transition-duration: 0.5s;
+    &:hover {
+        background-color: #ffffff;
+        color: #4a4a4a;
+        fill: #4a4a4a;
+        border: 1px solid #4a4a4a;
+        transform: scale(1.1);
+    }
+}
+
+.marketing_registration {
+    width: 652px;
+    padding-right: 27px;
+}
+
+.marketing_registration_header {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    &_p {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        padding: 22px 0;
+    }
+}
+
+.loyalty_items {
+    @include list();
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.loyalty_item_content {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding-left: 23px;
+}
