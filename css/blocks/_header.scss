@@ -1,51 +1,51 @@
 /* Шапка и меню сайта */
 
 .header {
-    background-color: #222222;
-    height: 75px;
-    position: relative;
+  background-color: #222222;
+  height: 75px;
+  position: relative;
 }
 
 .header-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 0;
-    @media (max-width: $tablet_breakpoint) {
-        padding: 18px 16px;
-    }
-    @media (max-width: $phone_breakpoint) {
-        padding: 18px 8px;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  @media (max-width: $tablet_breakpoint) {
+    padding: 18px 16px;
+  }
+  @media (max-width: $phone_breakpoint) {
+    padding: 18px 8px;
+  }
 }
 
 /* Левая часть меню сайта */
 
 .header-col-1 {
-    display: flex;
-    justify-content: space-between;
-    @include list();
-    // list-style-type: none;
-    width: 111px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  @include list();
+  // list-style-type: none;
+  width: 111px;
+  align-items: center;
 }
 
 .brand_ico {
-    transition-property: transform;
-    transition-duration: 1s;
-    &:hover {
-        transform: rotateY(360deg);
-    }
+  transition-property: transform;
+  transition-duration: 1s;
+  &:hover {
+    transform: rotateY(360deg);
+  }
 }
 
 .header_icon_svg {
-    fill: #e8e8e8; // fill - изменение цвета в коде svg-картинки
-    transition-property: fill, transform;
-    transition-duration: 0.2s;
-    &:hover {
-        fill: $main_color;
-        transform: scale(1.1);
-    }
+  fill: #e8e8e8; // fill - изменение цвета в коде svg-картинки
+  transition-property: fill, transform;
+  transition-duration: 0.2s;
+  &:hover {
+    fill: $main_color;
+    transform: scale(1.1);
+  }
 }
 
 /* Правая часть меню сайта */
@@ -53,118 +53,159 @@
 // Сендвич меню сайта
 
 .header-col-2 {
-    display: flex;
-    justify-content: space-between;
-    @include list();
-    // list-style-type: none;
-    width: 168px;
-    align-items: center;
-    @media (max-width: $phone_breakpoint) {
-        justify-content: right;
-    }
+  display: flex;
+  justify-content: space-between;
+  @include list();
+  // list-style-type: none;
+  width: 168px;
+  align-items: center;
+  @media (max-width: $phone_breakpoint) {
+    justify-content: right;
+  }
 }
 
 .sandwich_drop {
-    display: block;
+  display: block;
 }
 
 .sandwich_list_wrap {
-    position: absolute;
-    z-index: 10;
-    width: 232px;
-    height: 764px;
-    top: 75px;
-    right: 0px;
-    background: #ffffff;
-    box-shadow: $box_shadow;
-    padding: 16px 17px 16px 0;
-    &_close {
-        display: none;
-    }
+  position: absolute;
+  z-index: 10;
+  width: 232px;
+  height: 764px;
+  top: 75px;
+  right: 0px;
+  background: #ffffff;
+  box-shadow: $box_shadow;
+  padding: 16px 17px 16px 0;
+  &_close {
+    display: none;
+  }
 }
 
 .sandwich_close {
-    text-align: end;
+  text-align: end;
 }
 
 .button_close {
-    background: #ffffff;
-    border: none;
+  background: #ffffff;
+  border: none;
 }
 
 .sandwich_list {
-    @include list();
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  @include list();
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .sandwich_list_header {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-    padding: 9px 0 4px 34px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  padding: 9px 0 4px 34px;
 }
 
 .sandwich_list_button {
-    font-size: 14px;
-    line-height: 17px;
-    color: #f16d7f;
-    background: #ffffff;
-    border: none;
-    cursor: pointer;
-    padding: 20px 0 12px 33px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #f16d7f;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 20px 0 12px 33px;
 }
 
 .sandwich_list_link_wrap {
-    @include list();
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
+  @include list();
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
 }
 
 .sandwich_list_link {
-    font-size: 14px;
-    line-height: 17px;
-    color: #6f6e6e;
-    text-decoration: none;
-    padding-left: 54px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6f6e6e;
+  text-decoration: none;
+  padding-left: 54px;
 }
 
 // Регистрация
 
 .registracion_wrap {
-    @media (max-width: $phone_breakpoint) {
-        display: none;
-    }
+  @media (max-width: $phone_breakpoint) {
+    display: none;
+  }
 }
 
 // Корзина
 
 .cart_wrap {
-    @media (max-width: $phone_breakpoint) {
-        display: none;
-    }
+  position: relative;
+  @media (max-width: $phone_breakpoint) {
+    display: none;
+  }
 }
 
 .cart {
-    position: relative;
-    margin-right: 10px;
-    &_number {
-        position: absolute;
-        top: -23px;
-        right: -10px;
-        width: 19px;
-        height: 19px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 14px;
-        color: #ffffff;
-        background-color: $main-color;
-    }
+  margin-right: 10px;
+  &_number {
+    position: absolute;
+    top: -7px;
+    right: 3px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+    background-color: $main-color;
+  }
+}
+
+.basket {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 37px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+@media (min-width: 340px) {
+  .basket {
+    font-size: 16px;
+  }
+}
+@media (min-width: 552px) {
+  .basket {
+    width: 500px;
+  }
+}
+
+.basketRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+
+.basketHeader {
+  font-weight: bold;
+}
+
+.basketTotal {
+  font-weight: bold;
+  text-align: right;
 }
