@@ -19,6 +19,14 @@
     align-items: center;
 }
 
+.brand_ico {
+    transition-property: transform;
+    transition-duration: 1s;
+    &:hover {
+        transform: rotateY(360deg);
+    }
+}
+
 .header-col-2 {
     display: flex;
     justify-content: space-between;
@@ -31,10 +39,14 @@
 
 .header_icon_svg {
     fill: #e8e8e8; // fill - изменение цвета в коде svg-картинки
+    transition-property: fill, transform;
+    transition-duration: 0.2s;
     &:hover {
         fill: $main_color;
+        transform: scale(1.1);
     }
 }
+
 .cart {
     position: relative;
     margin-right: 10px;
