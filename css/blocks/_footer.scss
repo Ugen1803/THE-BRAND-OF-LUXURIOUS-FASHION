@@ -30,8 +30,10 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition-duration: 1s;
     &:hover {
         background-color: $main_color;
         color: white;
+        transform: rotate(360deg);
     }
 }

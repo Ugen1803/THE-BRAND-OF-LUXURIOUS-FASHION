@@ -1,0 +1,232 @@
+/* Страница Оформления Покупок */
+
+.purchases_wrap {
+    padding: 96px 0 48px;
+    display: flex;
+    gap: 128px;
+}
+
+.purchases_cards {
+    min-width: 652px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.purchases_items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.purchases_item {
+    width: 652px;
+    height: 306px;
+    display: flex;
+    background: #ffffff;
+    filter: drop-shadow(17px 19px 24px rgba(119, 43, 43, 0.13));
+}
+
+.purchases_item_img {
+    width: 262px;
+    height: 306px;
+}
+
+.description_item {
+    padding: 22px 57px 62px 31px;
+}
+
+.description_item_name {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #222222;
+    padding-bottom: 42px;
+}
+
+.description_item_content {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 28px;
+    color: #575757;
+    .price_300 {
+        color: #ef5b70;
+    }
+    .quantity_2 {
+        font-size: 18px;
+        line-height: 22px;
+        color: #656565;
+        border: 1px solid #eaeaea;
+        padding: 1px 16px;
+        margin-left: 24px;
+    }
+}
+
+.close_icon {
+    padding: 28px 22px 0 57px;
+    & :hover {
+        fill: #ef5b70;
+    }
+}
+
+.purchases_button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.press_button {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding: 17px 40px;
+    background: #ffffff;
+    border: 1px solid #a4a4a4;
+    transition-property: background-color /*, transform*/;
+    transition-duration: 0.5s;
+    &:hover {
+        background: #ef5b70;
+        border: 1px solid $main_color;
+        color: #ffffff;
+        // transform: rotateX(360deg); - Поворот кнопки вокруг своей горизонтальной оси
+        animation: bounce 0.7s infinite alternate; /* - Пример анимации*/
+    }
+    @keyframes bounce {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.checkout {
+    width: 360px;
+}
+
+.shipping_adress_wrap {
+    padding: 17px 0 57px;
+}
+
+.shipping_adress_name {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    padding-bottom: 20px;
+}
+
+.shipping_adress {
+    width: 360px;
+    height: 45px;
+    margin-bottom: 20px;
+    padding-left: 17px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #222222;
+    border: 1px solid #a4a4a4;
+    &::placeholder {
+        color: #222222;
+    }
+    &_grey {
+        width: 360px;
+        height: 45px;
+        margin-bottom: 20px;
+        padding-left: 17px;
+        font-size: 13px;
+        line-height: 16px;
+        color: #222222;
+        border: 1px solid #a4a4a4;
+        &::placeholder {
+            color: #b1b1b1;
+        }
+    }
+}
+
+.button_getaquote {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #4a4a4a;
+    background: #ffffff;
+    border: 1px solid #a4a4a4;
+    padding: 11px 15px;
+    margin-top: 4px;
+    transition-property: background-color, transform;
+    transition-duration: 0.5s;
+    &:hover {
+        background-color: #ef5b70;
+        border: 1px solid $main_color;
+        color: #ffffff;
+        transform: scale(1.25);
+    }
+}
+
+.checkout_wrap {
+    min-width: 360px;
+    background: #f5f3f3;
+}
+
+.sub_total {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color: #4a4a4a;
+    padding: 39px 34px 12px 218px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grand_total {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    &_900 {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #f16d7f;
+    }
+    display: flex;
+    justify-content: space-between;
+    padding: 0 37px 21px 153px;
+}
+
+.streak_button_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.streak_grey_checkout {
+    width: 288px;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 0 42px;
+}
+
+.button_checkout_wrap {
+    padding: 17px 0 42px;
+}
+
+.button_checkout {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    background: $main_color;
+    padding: 15px 41px;
+    border: 1px solid $main_color;
+    transition-property: background-color, transform;
+    transition-duration: 0.5s;
+    &:hover {
+        background-color: #ffffff;
+        color: #4a4a4a;
+        border: 1px solid #4a4a4a;
+        transform: scale(1.1);
+    }
+}

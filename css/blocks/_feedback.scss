@@ -47,7 +47,7 @@
 }
 
 .wrap_email {
-    background: #e1e1e1;
+    background-color: #e1e1e1;
     padding: 7px 64px 6px 22px;
     border-radius: 23px 0 0 23px;
 }
@@ -73,6 +73,13 @@
     text-align: center;
     padding: 7px 7px 6px 8px;
     border-radius: 0 23px 23px 0;
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    &:hover {
+        background-color: #e1e1e1;
+        color: #4a4a4a;
+    }
 }
 
 .subscribe_button {
@@ -84,4 +91,11 @@
     color: #ffffff;
     background-color: #f16d7f;
     border: none;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    &:hover {
+        color: #222;
+        background-color: #f16d7f;
+        border-radius: 0 23px 23px 0;
+    }
 }

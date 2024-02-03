@@ -31,6 +31,45 @@
     width: 360px;
     background-color: #f8f8f8;
     list-style-type: none;
+    position: relative;
+}
+
+.products_overlay {
+    position: absolute;
+    background: rgba(58, 56, 56, 0.86);
+    width: 360px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // opacity: 0; - Исчезновение
+    transform: scale(0);
+    transform-origin: top left;
+    transition: 0.5s;
+    // z-index: 10;
+}
+
+.card:hover .products_overlay {
+    // opacity: 1; - Исчезновение
+    transform: scale(1);
+}
+
+.btn_add {
+    background-color: transparent;
+    padding: 11px 16px 8px 13px;
+    border: 1px solid #ffffff;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    &_img {
+        vertical-align: middle;
+        padding-right: 11px;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .feture_item1 {
@@ -138,14 +177,16 @@
 .all_product {
     border: 1px solid #ff6a6a;
     padding: 14px 38px;
-    background-color: #e5e5e5;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: #f26376;
     text-decoration: none;
+    transition-property: background-color, transform;
+    transition-duration: 0.3s;
     &:hover {
         background-color: $main_color;
         color: #ffffff;
+        transform: translateY(-10px);
     }
 }

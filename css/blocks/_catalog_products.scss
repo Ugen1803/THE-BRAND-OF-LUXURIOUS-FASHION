@@ -26,12 +26,12 @@
         font-weight: 300;
         font-size: 14px;
         line-height: 17px;
-        color: #636363;
         & :hover {
             color: #f16d7f;
         }
         & a {
             text-decoration: none;
+            color: #636363;
         }
         &::after {
             content: " / \00a0";
