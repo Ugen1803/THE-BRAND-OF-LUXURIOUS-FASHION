@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cart</title>
+
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Подключение стилей -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" />
+
+    <!-- Подключение иконок -->
+    <link rel="icon" href="images/header/brand-ico.png" type="image/png" />
+    <script defer src="https://kit.fontawesome.com/cb68bb75f4.js" crossorigin="anonymous"></script>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script defer src="js/index.js"></script>
+  </head>
+
+  <body>
+    <!-- ИНТЕРФЕЙС .app для Инстанса VUEJS-->
+    <div id="app">
+      <!-- HEADER и МЕНЮ сайта -->
+      <header class="header">
+        <site-header
+          :sandwich_list="sandwichVisibleList"
+          :cart_list="cartVisibleList"
+          :close_list="closeList"
+          @sandwich_change_list="sandwichChangeList"
+          @cart_change_list="cartChangeList"></site-header>
+      </header>
+
+      <!-- MAIN -->
+      <main class="main">
+        <!-- Блок информации о данной странице -->
+        <section class="page-title">
+          <h2 class="hidden">О данной странице</h2>
+          <div class="container">
+            <div class="page-wrap">
+              <h1 class="page-name">SHOPPING CART</h1>
+
+              <!-- Навигация хлебные крошки -->
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="index.html">HOME</a>
+                  </li>
+                  <li class="breadcrumb-item-active" aria-current="page">SHOPPING CART</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <!-- Блок Оформления Покупки -->
+        <section class="purchases">
+          <h2 class="hidden">Оформление покупок</h2>
+
+          <div class="container">
+            <div class="purchases-wrap">
+              <!-- Список покупки -->
+              <section class="purchases-cards">
+                <ul class="purchases-items">
+                  <li class="purchases-item">
+                    <div class="purchases-item-img1"></div>
+
+                    <div>
+                      <a class="information-product" href="catalog.html">
+                        <div class="description-item-cart">
+                          <h3 class="description-item-name">
+                            ELLERY X M'O <br />
+                            CAPSULE
+                          </h3>
+                          <p class="description-item-content">
+                            Price: <span class="price-300">$300</span> <br />
+                            Color: Gray <br />
+                            Size: XL <br />
+                            Quantity: <span class="quantity-2">1</span>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="close-icon-wrap-cart">
+                      <svg
+                        class="close-icon-svg close-icon"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 18 18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467832C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" />
+                      </svg>
+                    </div>
+                  </li>
+
+                  <li class="purchases-item">
+                    <div class="purchases-item-img2"></div>
+
+                    <a href="catalog.html" class="information-product">
+                      <div class="description-item-cart">
+                        <h3 class="description-item-name">
+                          ELLERY X M'O <br />
+                          CAPSULE
+                        </h3>
+
+                        <p class="description-item-content">
+                          Price: <span class="price-300">$200</span> <br />
+                          Color: Red <br />
+                          Size: XL <br />
+                          Quantity: <span class="quantity-2">2</span>
+                        </p>
+                      </div>
+                    </a>
+
+                    <div class="close-icon-wrap-cart">
+                      <svg
+                        class="close-icon-svg close-icon"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 18 18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467832C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" />
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+
+                <!-- Кнопки совершения покупки -->
+                <div class="purchases-button">
+                  <button class="press-button">CLEAR SHOPPING CART</button>
+
+                  <button class="press-button">CONTINUE SHOPPING</button>
+                </div>
+              </section>
+
+              <!-- Блок Совершение покупки -->
+              <section class="checkout">
+                <div class="shipping-adress-wrap">
+                  <h3 class="shipping-adress-name">SHIPPING ADRESS</h3>
+
+                  <form action="#">
+                    <input class="shipping-adress-grey" placeholder="Bangladesh" required />
+                    <input class="shipping-adress" placeholder="State" required />
+                    <input class="shipping-adress" placeholder="Postcode / Zip" required />
+
+                    <button class="button-getaquote">GET A QUOTE</button>
+                  </form>
+                </div>
+
+                <div class="checkout-wrap">
+                  <div class="total-price-name">
+                    <p class="sub-total">SUB TOTAL <span>$700</span></p>
+                    <p class="grand-total">GRAND TOTAL <span class="grand-total-700">$700</span></p>
+                  </div>
+
+                  <div class="streak-button-wrap">
+                    <div class="button-checkout-wrap">
+                      <button class="button-checkout">PROCEED TO CHECKOUT</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ОБРАТНАЯ СВЯЗЬ -->
+      <section class="feedback">
+        <site-feedback></site-feedback>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <site-footer></site-footer>
+      </footer>
+    </div>
+  </body>
+</html>
