@@ -1,0 +1,214 @@
+/**
+ * СТРАНИЦА FOR WOMAN
+ */
+
+/* Блок информации о данной странице */
+
+/* Слайдер товаров */
+
+.slider {
+  background-color: #f7f7f7;
+}
+
+.slider-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  height: 777px;
+}
+
+.slider-button {
+  width: 47px;
+  height: 47px;
+  padding: 13px 17px;
+  background-color: rgba(42, 42, 42, 0.15);
+  border: none;
+  transition-property: fill;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    fill: $corporate_color;
+  }
+}
+
+.slide-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slide-item {
+  position: absolute;
+  height: 724px;
+  margin: 11px 0 42px;
+  display: block;
+
+  @media (max-width: $tablet_breakpoint) {
+    height: 565px;
+    padding: 29px 0;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    height: 454px;
+    padding: 85px 0;
+  }
+}
+
+.hidden-slide {
+  visibility: hidden;
+}
+
+.fas.fa-spinner.fa-spin {
+  font-size: 70px;
+  color: #ef5b70;
+  position: absolute;
+}
+
+/* Блок с характеристиками товара на слайде */
+
+.card-offers {
+  @media (max-width: $tablet_breakpoint) {
+    outline: 1px solid #eaeaea;
+  }
+}
+
+.wrap-card-offers {
+  position: relative;
+  outline: 1px solid #eaeaea;
+  margin: -65px 0 128px;
+  padding: 65px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 0 0 129px 0;
+    outline: none;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    margin: 0 0 64px 0;
+  }
+}
+
+.card-offers-name {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: $corporate_color;
+  padding-bottom: 12px;
+}
+
+.streak-red {
+  width: 63px;
+  border-bottom: 3px solid #ef5b70;
+}
+
+.marketing {
+  padding: 12px 0 48px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4d4d4d;
+}
+
+.p-marketing {
+  width: 554px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5e5e5e;
+
+  @media (max-width: $phone_breakpoint) {
+    width: 326px;
+  }
+}
+
+.p-price {
+  padding: 32px 0 65px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ef5b70;
+
+  @media (max-width: $phone_breakpoint) {
+    padding: 32px 0;
+  }
+}
+
+.streak-grey {
+  width: 641px;
+  border-bottom: 1px solid #eaeaea;
+
+  @media (max-width: $phone_breakpoint) {
+    width: 175px;
+  }
+}
+
+/* Фильтр по параметрам */
+
+.filter-offers {
+  padding: 65px 0 49px;
+  gap: 23px;
+
+  @media (max-width: $phone_breakpoint) {
+    padding: 49px 0 65px;
+  }
+}
+
+/* Кнопка добавить в корзину из слайдера */
+
+.cart-offers {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #ffffff;
+  border: 1px solid #ff6a6a;
+  padding: 14px 56px 14px 23px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  color: #f26376;
+  fill: #ef5b70;
+  transition-duration: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $corporate_color;
+    color: #ffffff;
+    fill: #ffffff;
+    transform: rotateY(360deg);
+  }
+}
+
+/* Блок с товарами из базы данных */
+
+/* Адаптация карточек при мобильных версиях */
+
+.change :nth-last-child(3) {
+  @media (max-width: $tablet_breakpoint) {
+    display: flex;
+    flex-flow: wrap;
+    display: none;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    display: flex;
+    flex-flow: wrap;
+  }
+}
+
+/* Отталкивание раздела feedback от Блока с карточками товаров */
+
+.shift {
+  margin-bottom: 128px;
+
+  @media (max-width: $phone_breakpoint) {
+    margin-bottom: 64px;
+  }
+}

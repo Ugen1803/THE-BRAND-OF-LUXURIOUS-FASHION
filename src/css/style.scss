@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/**
+ * ПЕРЕМЕННЫЕ (СВОЙСТВА, ПРИМЕНЯЕМЫЕ К ЭЛЕМЕНТАМ)
+ */
+
+/* Корпоративный цвет сайта */
+$corporate_color: #f16d7f;
+
+/* Цвет тени блоков */
+$box_shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+/* Максимальные разрешения при адаптации сайта на мобильных устройствах */
+$tablet_breakpoint: 1180px;
+$phone_breakpoint: 768px;
+
+/* MIXIN (Примеси) - группа св-в, применяемые к эл-ту: (@include list()) */
+
+/* Настройки Списка по умолчанию */
+@mixin list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Настройки Кнопки по умолчанию */
+@mixin default-button() {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/**
+ * ОБЩИЕ НАСТРОЙКИ ДЛЯ ВСЕХ БЛОКОВ
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Метод прижать Футер к низу страницы */
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  /* desktop */
+  // outline: 1px solid red;
+  margin: 0 auto;
+  width: 1140px; // ширина для Десктопа по макету
+
+  /* АДАПТИВ БЛОКОВ ДЛЯ РАЗНЫХ ДЕВАЙСОВ */
+
+  /* tablet */
+  // +40px для перестроения адаптива = 1180px
+  @media (max-width: $tablet_breakpoint) {
+    width: 736px; // ширина для Планшета по макету
+  }
+
+  /* phone */
+  // +32px для перестроения адаптива = 768px
+  @media (max-width: $phone_breakpoint) {
+    width: 360px; // ширина для Телефона по макету
+  }
+}
+
+/* Классы по умолчанию */
+
+/* Скрытая область */
+.hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -99999px;
+  margin: -1px;
+}
+
+/* Кнопка по умолчанию */
+.default-button {
+  @include default-button();
+}
+
+.information-product {
+  text-decoration: none;
+}
+
+/**
+ * БЛОКИ SCSS
+ */
+
+/**
+ * HEADER и МЕНЮ сайта
+ */
+
+@import 'blocks/header';
+
+/**
+ * MAIN
+ */
+
+/* ПРОМО-БЛОК главной страницы */
+@import 'blocks/index/promo';
+
+/* ТОВАРЫ */
+
+/* Раздел КАТЕГОРИИ товаров */
+@import 'blocks/index/categories';
+/* Карточка Товара */
+@import 'blocks/product-card';
+/* Раздел КАТАЛОГ товаров на Главной */
+@import 'blocks/index/products';
+/* Страница КАТАЛОГА товаров */
+@import 'blocks/product-catalog';
+
+/**
+ * СТРАНИЦА FOR WOMAN
+ */
+@import 'blocks/for-woman';
+
+/**
+ * СТРАНИЦА РЕГИСТРАЦИИ НА САЙТЕ
+ */
+@import 'blocks/registracion';
+
+/**
+ * СТРАНИЦА ОФОРМЛЕНИЯ/КОРЗИНА ПОКУПКИ
+ */
+@import 'blocks/cart';
+
+/**
+ * НИЖНЯЯ ЧАСТЬ СТРАНИЦ САЙТА
+ */
+
+/* Раздел сайта ОСОБЕННОСТИ и РАЗНОЕ */
+@import 'blocks/features';
+/* Раздел сайта ОБРАТНАЯ СВЯЗЬ */
+@import 'blocks/feedback';
+/* FOOTER сайта */
+@import 'blocks/footer';

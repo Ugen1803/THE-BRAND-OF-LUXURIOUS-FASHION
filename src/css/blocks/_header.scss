@@ -1,0 +1,266 @@
+/**
+ * HEADER и МЕНЮ сайта
+ */
+
+.header {
+  background-color: #222222;
+  height: 75px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+
+  @media (max-width: $tablet_breakpoint) {
+    padding: 18px 16px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    padding: 18px 8px;
+  }
+}
+
+/* Стиль иконок в header */
+
+.header-icon-svg {
+  fill: #e8e8e8; // fill - изменение цвета в коде svg-картинки
+  transition-property: fill, transform;
+  transition-duration: 0.2s;
+
+  &:hover {
+    fill: $corporate_color;
+    transform: scale(1.1);
+  }
+}
+
+/* Левая часть меню сайта */
+
+.header-col-1 {
+  @include list();
+  display: flex;
+  justify-content: space-between;
+  width: 111px;
+  align-items: center;
+}
+
+/* Лого Бренда - Кнопка */
+
+.brand-ico {
+  transition-property: transform;
+  transition-duration: 1s;
+
+  &:hover {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Поиск по товарам */
+
+/* Правая часть меню сайта */
+
+.header-col-2 {
+  @include list();
+  display: flex;
+  justify-content: space-between;
+  width: 168px;
+  align-items: center;
+}
+
+/* Кнопка Сэндвич Меню товаров */
+
+/* Сэндвич Меню товаров */
+
+.sandwich-drop {
+  display: block;
+}
+
+.sandwich-list-wrap {
+  position: absolute;
+  z-index: 10;
+  width: 232px;
+  height: 764px;
+  top: 75px;
+  right: 0px;
+  background: #ffffff;
+  box-shadow: $box_shadow;
+  padding: 16px 17px 16px 0;
+}
+
+.sandwich-close {
+  text-align: end;
+}
+
+.close-icon-svg {
+  fill: #6f6e6e; // fill - изменение цвета в коде svg-картинки
+  transition-property: fill, transform;
+  transition-duration: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    fill: $corporate_color;
+    transform: scale(1.5);
+  }
+}
+
+.sandwich-list-header {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  padding: 9px 0 4px 34px;
+}
+
+.sandwich-list {
+  @include list();
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sandwich-list-button {
+  @include default-button();
+  color: $corporate_color;
+  padding: 20px 0 12px 33px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.sandwich-list-link-wrap {
+  @include list();
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.sandwich-list-link {
+  font-size: 14px;
+  line-height: 17px;
+  color: #6f6e6e;
+  text-decoration: none;
+  padding-left: 54px;
+}
+
+/* Кнопка Регистрация */
+
+/* Кнопка Корзина */
+
+.basket-btn {
+  position: relative;
+}
+
+/* Корзина */
+
+.basket {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 37px;
+  color: #6f6e6e;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: $box_shadow;
+  width: 700px;
+  font-size: 16px;
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 700px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    width: 360px;
+    font-size: 12px;
+    padding: 5px;
+    margin-right: -8px;
+  }
+}
+
+.basket-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 3px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ebebeb;
+  align-self: center;
+
+  & div {
+    justify-self: center;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    gap: 3px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+}
+
+.basket-header {
+  font-weight: bold;
+}
+
+.basket-card-content-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 3px;
+  padding: 10px 0;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+
+  & div {
+    justify-self: center;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    text-align: center;
+  }
+}
+
+.basket-total {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.close-icon-wrap {
+  display: flex;
+  justify-content: end;
+  fill: #575757;
+
+  & :hover {
+    fill: #ef5b70;
+  }
+}
+
+.close-icon {
+  @media (max-width: $phone_breakpoint) {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.cart-button {
+  width: 40px;
+  height: 20px;
+  color: #6f6e6e;
+  border-radius: 15px;
+  border: 0;
+  outline: 1px solid $corporate_color;
+  transition-property: fill, transform;
+  transition-duration: 0.2s;
+  margin: 2px;
+
+  &:hover {
+    fill: $corporate_color;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+  }
+}

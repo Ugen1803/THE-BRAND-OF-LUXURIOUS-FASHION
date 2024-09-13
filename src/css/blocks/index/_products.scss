@@ -1,0 +1,77 @@
+/**
+ * Раздел КАТАЛОГ товаров на Главной
+ */
+
+.products {
+  background-color: #ffffff;
+}
+
+/* Заголовки секции */
+
+.products-header-wrap {
+  padding: 0 0 48px 0;
+
+  @media (max-width: $tablet_breakpoint) {
+    padding: 0 0 74px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    padding: 0 0 65px;
+  }
+}
+
+.h2-featured-items {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+  text-align: center;
+}
+
+.p-featured-items {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9f9f9f;
+  text-align: center;
+  margin-top: 6px;
+
+  @media (max-width: $tablet_breakpoint) {
+    margin-top: 3px;
+  }
+}
+
+/* КНОПКА все товары*/
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0 95px;
+
+  @media (max-width: $tablet_breakpoint) {
+    padding: 33px 0 65px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    padding: 41px 0 96px;
+  }
+}
+
+.all-product {
+  border: 1px solid #ff6a6a;
+  padding: 14px 38px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f26376;
+  text-decoration: none;
+  transition-property: background-color, transform;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background-color: $corporate_color;
+    color: #ffffff;
+    transform: translateY(-10px);
+  }
+}

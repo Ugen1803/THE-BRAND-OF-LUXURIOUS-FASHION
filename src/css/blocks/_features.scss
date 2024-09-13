@@ -1,0 +1,57 @@
+/**
+ * Раздел сайта ОСОБЕННОСТИ и РАЗНОЕ
+ */
+
+.features {
+  background-color: #222224;
+}
+
+/* Рекламные Элементы */
+
+.categories-features {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 103px 0 104px;
+  gap: 30px;
+  list-style-type: none;
+
+  @media (max-width: $tablet_breakpoint) {
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0 64px;
+    gap: 48px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    padding: 48px 0 81px;
+  }
+}
+
+.feature-item {
+  width: 360px;
+  cursor: pointer;
+}
+
+.feature-img {
+  height: 40px;
+  margin-bottom: 19px;
+  text-align: center;
+}
+
+.h3-features {
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: 19.96px;
+  line-height: 24px;
+  text-align: center;
+  color: #fbfbfb;
+}
+
+.p-features {
+  font-weight: 300;
+  font-size: 13.972px;
+  line-height: 17px;
+  text-align: center;
+  color: #fbfbfb;
+}

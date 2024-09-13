@@ -1,0 +1,130 @@
+/**
+ * Раздел КАТЕГОРИИ товаров
+ */
+
+.categories {
+  background-color: #ffffff;
+}
+
+.categories-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 65px 0 96px;
+  gap: 30px;
+  list-style-type: none;
+
+  @media (max-width: $tablet_breakpoint) {
+    padding: 20px 0 155px;
+    gap: 20px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    padding: 64px 0;
+    gap: 32px;
+    justify-content: center;
+  }
+}
+
+/* FOR WOMAN */
+
+.cat-women {
+  background-color: grey;
+  background-image: url('../images/section-categories/cat-women.jpg');
+  width: 360px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 232px;
+    height: 168px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    width: 343px;
+    height: 247px;
+  }
+}
+
+/* FOR MAN */
+
+.cat-men {
+  background-color: grey;
+  background-image: url('../images/section-categories/cat-men.jpg');
+  width: 360px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 232px;
+    height: 168px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    width: 343px;
+    height: 247px;
+  }
+}
+
+/* FOR KIDS */
+
+.cat-kids {
+  background-color: grey;
+  background-image: url('../images/section-categories/cat-kids.jpg');
+  width: 360px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 232px;
+    height: 168px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    width: 343px;
+    height: 247px;
+  }
+}
+
+/* ACCESORIES */
+
+.cat-accesories {
+  background-color: grey;
+  background-image: url('../images/section-categories/cat-ACCESORIES.jpg');
+  width: 1140px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 735px;
+    height: 116px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    width: 343px;
+    height: 111px;
+  }
+}
+
+.cat-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: $corporate_color;
+}
+
+.subtitle-cat-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}

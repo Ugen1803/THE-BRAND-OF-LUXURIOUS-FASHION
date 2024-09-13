@@ -1,0 +1,379 @@
+/**
+ * Страница КАТАЛОГА товаров
+ */
+
+/* Блок информации о данной странице */
+.page-title {
+  background-color: #f8f3f4;
+}
+
+.page-wrap {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $phone_breakpoint) {
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px 0 46px;
+  }
+}
+
+.page-name {
+  font-size: 24px;
+  line-height: 29px;
+  color: $corporate_color;
+}
+
+/* Навигация хлебные крошки*/
+
+.breadcrumb {
+  list-style-type: none;
+  display: flex;
+
+  &-item {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+
+    & :hover {
+      color: $corporate_color;
+    }
+
+    & a {
+      text-decoration: none;
+      color: #636363;
+    }
+
+    &::after {
+      content: ' / \00a0';
+      color: #636363;
+    }
+
+    &:last-child:after {
+      content: '';
+    }
+
+    &-active {
+      font-weight: bold;
+      color: $corporate_color;
+    }
+  }
+}
+
+/* Блок с товарами */
+/* Фильтр товаров */
+
+.filter-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 51px 0 64px;
+  gap: 30px;
+
+  @media (max-width: $tablet_breakpoint) {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 24px 0 40px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    grid-template-columns: 1fr 9fr;
+    gap: 10px;
+    padding: 24px 0 32px;
+  }
+}
+
+.filter {
+  position: relative;
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 100%;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    width: auto;
+  }
+}
+
+.filter-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-left: 16px;
+  border: none;
+  background: #ffffff;
+  fill: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    fill: #ef5b70;
+    color: #ef5b70;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    padding-left: 0px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    gap: 0px;
+    padding-left: 0px;
+  }
+}
+
+.filter-title-h3 {
+  @media (max-width: $phone_breakpoint) {
+    display: none;
+  }
+}
+
+.filter-ico {
+  height: 10px;
+  width: 15px;
+
+  @media (max-width: $phone_breakpoint) {
+    height: 25px;
+    width: 37px;
+  }
+}
+
+.filter[open] {
+  box-shadow: $box_shadow;
+  z-index: 20;
+}
+
+.filter[open] .filter-title {
+  fill: #ef5b70;
+  color: #ef5b70;
+}
+
+.filter[open] .filter-title-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: -10;
+  width: 360px;
+  background-color: #ffffff;
+  padding: 16px;
+  box-shadow: $box_shadow;
+}
+
+.filter-title-name {
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6f6e6e;
+  cursor: pointer;
+}
+
+.filter-drop {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  background-color: #ffffff;
+  border-left: 5px solid #ef5b70;
+  border-bottom: 1px solid #ebebeb;
+  padding: 11px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6f6e6e;
+}
+
+.filter-title-name[open] .filter-drop {
+  color: #ef5b70;
+}
+
+.filter-title-name[open] .filter-drop-button {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  background-color: #ffffff;
+  padding: 24px 0 6px 17px;
+}
+
+.filter-button {
+  background: #ffffff;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6f6e6e;
+  cursor: pointer;
+}
+
+/* Фильтр по параметрам */
+
+.filter-sort {
+  display: flex;
+  gap: 15px;
+  color: #6f6e6e;
+
+  @media (max-width: $phone_breakpoint) {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
+
+.list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  background: #ffffff;
+}
+
+.list-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6f6e6e;
+  fill: #6f6e6e;
+  transition-duration: 0.3s;
+
+  &:hover {
+    fill: #ef5b70;
+    color: #ef5b70;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    font-size: 12px;
+    line-height: 14px;
+    gap: 9px;
+  }
+}
+
+.list[open] .list-title {
+  fill: #070505;
+  color: #ef5b70;
+}
+
+.list-drop {
+  position: absolute;
+  left: -9px;
+  z-index: 20;
+  background: #ffffff;
+  box-shadow: $box_shadow;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 7px 30px 11px 9px;
+}
+
+.list-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6f6e6e;
+}
+
+.list-checkbox {
+  height: 12px;
+  width: 12px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+/* Товары */
+
+.close-fetured-item {
+  @media (max-width: $tablet_breakpoint) {
+    display: none;
+  }
+}
+
+/* Пагинация товаров */
+
+.pagination-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0 96px;
+
+  @media (max-width: $tablet_breakpoint) {
+    padding: 40px 0 63px;
+  }
+}
+
+.pagination-border {
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+}
+
+.pagination {
+  height: 43px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bracket {
+  fill: #000000;
+  display: flex;
+  text-align: center;
+  background: #ffffff;
+  padding: 0 13px;
+  border: none;
+  transition-property: background-color, transform;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    fill: $corporate_color;
+    transform: scale(1.3);
+  }
+}
+
+.page {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #c4c4c4;
+  background: #ffffff;
+  padding: 0 9px;
+  border: none;
+  transition-property: background-color, transform;
+  transition-duration: 0.5s;
+  cursor: pointer;
+
+  &-active {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: $corporate_color;
+    background: #ffffff;
+    padding: 0 9px;
+    border: none;
+    transition-property: background-color, transform;
+    transition-duration: 0.5s;
+  }
+
+  &-separator {
+    margin: 0 -7px;
+    color: #c4c4c4;
+    z-index: 10;
+  }
+
+  &:hover {
+    color: $corporate_color;
+    transform: scale(1.5);
+  }
+}

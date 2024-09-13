@@ -1,0 +1,132 @@
+/**
+ * Раздел сайта ОБРАТНАЯ СВЯЗЬ
+ */
+
+.feedback {
+  background-color: #fff;
+  background-image: url('../images/section-feedback/subscribe-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.communication {
+  display: flex;
+  align-items: flex-end;
+  gap: 327px;
+  padding: 97px 0px 156px;
+
+  @media (max-width: $tablet_breakpoint) {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 64px 0 140px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    gap: 59px;
+    padding: 64px 10px 110px;
+  }
+}
+
+.communication-wrap {
+  width: 360px;
+  text-align: center;
+}
+
+.p-communication {
+  padding-top: 30px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222224;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.h3-subscribe {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 39px;
+  color: #222224;
+
+  @media (max-width: $phone_breakpoint) {
+    line-height: 37px;
+  }
+}
+
+.promotion {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+
+  @media (max-width: $phone_breakpoint) {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.email {
+  padding-top: 32px;
+  display: flex;
+  margin: 0 10px;
+}
+
+.wrap-email {
+  background-color: #e1e1e1;
+  padding: 7px 64px 6px 22px;
+  border-radius: 23px 0 0 23px;
+}
+
+.subscribe-email {
+  background: #e1e1e1;
+  font-weight: normal;
+  width: 170px;
+  height: 36px;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #222224;
+  opacity: 0.67;
+  border: none;
+}
+
+.wrap-button {
+  background: $corporate_color;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 7px 7px 6px 8px;
+  border-radius: 0 23px 23px 0;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+
+  &:hover {
+    background-color: #e1e1e1;
+    color: #4a4a4a;
+  }
+}
+
+.subscribe-button {
+  width: 85px;
+  height: 36px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  background-color: $corporate_color;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: #222;
+    background-color: $corporate_color;
+    border-radius: 0 23px 23px 0;
+  }
+}

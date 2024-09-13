@@ -1,0 +1,134 @@
+/**
+ * Карточка Товара
+ */
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: $tablet_breakpoint) {
+    gap: 16px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 582px;
+  background-color: #f8f8f8;
+  list-style-type: none;
+  position: relative;
+}
+
+/* выезжающая маска */
+
+.product-overlay {
+  position: absolute;
+  background: rgba(58, 56, 56, 0.86);
+  width: 360px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // opacity: 0; // Исчезновение
+  transform: scale(0);
+  transform-origin: top left;
+  transition: 1.5s;
+  z-index: 1;
+}
+
+.card:hover .product-overlay {
+  // opacity: 1; // Исчезновение
+  transform: scale(1);
+}
+
+/* кнопка Добавить в Корзину */
+
+.btn-add {
+  background-color: transparent;
+  padding: 11px 16px 8px 13px;
+  border: 1px solid #ffffff;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &-img {
+    vertical-align: middle;
+    padding-right: 11px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Фото товара */
+
+.goods-item {
+  background-color: #ccc8c5;
+  width: 360px;
+  height: 420px;
+}
+
+/* Информация о товаре */
+
+.wrap-description-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 16px 20px;
+  box-sizing: content-box;
+}
+
+.name-item {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.description-item {
+  height: 100%;
+  max-width: 312px;
+  max-height: 51px;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  padding-top: 13px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5d5d5d;
+  box-sizing: content-box;
+
+  flex-grow: 1;
+}
+
+.price-item {
+  padding-top: 18px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $corporate_color;
+}
+
+/* Если нет товаров в базе: */
+
+.no-goods-list {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-goods-list svg {
+  outline: none;
+  width: 400px;
+  height: 400px;
+}

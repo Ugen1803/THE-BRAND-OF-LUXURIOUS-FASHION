@@ -1,0 +1,177 @@
+/**
+ * СТРАНИЦА РЕГИСТРАЦИИ НА САЙТЕ
+ */
+
+.registracion-wrap {
+  background-color: #ffffff;
+}
+
+.registration {
+  display: flex;
+  justify-content: space-between;
+  gap: 128px;
+  padding: 64px 0 96px;
+
+  @media (max-width: $tablet_breakpoint) {
+    gap: 22px;
+    padding: 40px 0 96px;
+  }
+
+  @media (max-width: $phone_breakpoint) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* Блок Регистрационные данные */
+
+.registration-points {
+  width: 360px;
+}
+
+.registration-input-point-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.registracion-heading {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+}
+
+.input-point {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  border: 1px solid #a4a4a4;
+  padding: 13px 0 16px 17px;
+
+  &::placeholder {
+    color: #b1b1b1;
+  }
+}
+
+.radio-points {
+  padding: 31px 0 33px;
+  display: flex;
+  align-items: center;
+}
+
+.radio-point {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #a4a4a4;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.radio-point-name {
+  padding: 0 20px 0 10px;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  text-align: center;
+}
+
+.registracion-p {
+  padding: 15px 0 39px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #b1b1b1;
+}
+
+.registracion-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 29px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  fill: #ffffff;
+  background: $corporate_color;
+  padding: 15px 41px;
+  border: 1px solid $corporate_color;
+  transition-property: background-color, transform;
+  transition-duration: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #4a4a4a;
+    fill: #4a4a4a;
+    border: 1px solid #4a4a4a;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: $phone_breakpoint) {
+  }
+}
+
+/* Блок Маркетинга для регистрации */
+
+.marketing-registration {
+  width: 652px;
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 354px;
+  }
+}
+
+.marketing-registration-header {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+
+  &-p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding: 22px 0;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    font-size: 16px;
+    line-height: 19px;
+
+    &_p {
+      font-size: 16px;
+      line-height: 19px;
+      padding: 32px 0 22px;
+    }
+  }
+}
+
+.loyalty-items {
+  @include list();
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loyalty-item {
+  display: flex;
+  gap: 23px;
+}
+
+.loyalty-item-content {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+
+  @media (max-width: $tablet_breakpoint) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
