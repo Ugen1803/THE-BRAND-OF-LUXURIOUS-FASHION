@@ -234,11 +234,32 @@ body {
 
 /* Кнопка Регистрация */
 /* Кнопка Корзина */
+.cart {
+  position: relative;
+}
+
+.cart-number {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #f16d7f;
+}
+
+/* Корзина */
 .basket-btn {
   position: relative;
 }
 
-/* Корзина */
 .basket {
   position: absolute;
   z-index: 3;
@@ -330,7 +351,7 @@ body {
   }
 }
 
-.cart-button {
+.basket-button {
   width: 40px;
   height: 20px;
   color: #6f6e6e;
@@ -341,12 +362,12 @@ body {
   transition-duration: 0.2s;
   margin: 2px;
 }
-.cart-button:hover {
+.basket-button:hover {
   fill: #f16d7f;
   transform: scale(1.1);
 }
 @media (max-width: 768px) {
-  .cart-button {
+  .basket-button {
     width: 20px;
     height: 20px;
     margin: 1px;

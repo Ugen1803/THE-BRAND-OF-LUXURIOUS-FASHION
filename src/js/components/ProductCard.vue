@@ -6,7 +6,7 @@
     <!-- выезжающая маска -->
     <div class="product-overlay">
       <!-- кнопка Добавить в Корзину -->
-      <button class="btn-add" @click="addGood">
+      <button class="btn-add" @click="addGood(item_card)" type="button">
         <img class="btn-add-img" src="images/header/cart-ico.svg" alt="btn-add" />
         Add to Cart
       </button>
@@ -39,17 +39,14 @@ defineProps({
 });
 
 // Метод добавления выбранного товара в корзину:
-function addGood() {
+function addGood(item) {
   try {
-    getFromService(getBasketGoods, 'PUT', { id: item_card.id });
+    getFromService(getBasketGoods, 'PUT', { id: item.id });
   }
-  
+
   catch (error) {
     console.error('Ошибка добавления товара в корзину:', error);
   }
 };
 
 </script>
-
-
-

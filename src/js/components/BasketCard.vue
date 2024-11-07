@@ -36,9 +36,10 @@
 
 <script setup name="BasketCard">
 
-import { ref, computed, onMounted } from 'vue';
 import { getBasketGoods } from '../constants.js'; // Сервер с БД товаров
 import { getFromService } from '../getFromService.js'; //Метод (FETCH) запрос-ответа данных с сервера. Источник {http} url. Вернет объект с данными в формате json
+
+import { ref, computed, onMounted } from 'vue';
 
 import BasketGoodsItem from './BasketGoodsItem.vue'; // Элементы ДАННЫХ для Корзины:
 
